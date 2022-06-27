@@ -21,13 +21,15 @@ draw = ImageDraw.Draw(img)
 #draw.ellipse((50, 50, 60, 100), fill='black', outline='black')
 #draw.text((200, 200), "HEY GUYS", font=myFont, fill=(0, 0, 0))
 #little demo for initial commit - looks acceptable
-x = 0
-y = 0
+x = 50
+y = 50
 for letter in ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]:
     draw_atom(draw, x, y, 8, letter, 8)
     x += 100
     if x >= IMG_WIDTH:
-        x = 0
+        x = 50
         y += 100
 
+
+img.save('image.png')
 img.show()
